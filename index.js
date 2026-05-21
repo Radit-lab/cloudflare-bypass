@@ -94,5 +94,5 @@ const server = createServer(async (req, res) => {
 
 server.listen(PORT, () => {
   console.log(`Cloudflare Bypass API running on http://localhost:${PORT}`);
-  console.log(`POST /cloudflare with { "mode": "iuam", "domain": "https://..." }`);
+  console.log(`POST /cloudflare with { "mode": "iuam", "domain": "https://example.com" }`);
 });

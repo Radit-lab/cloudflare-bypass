@@ -100,14 +100,14 @@ Bypasses Cloudflare protection for a given URL and returns a clearance cookie.
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `mode` | `string` | Yes | Must be `"iuam"` |
-| `domain` | `string` | Yes | Full URL of the protected page (e.g. `https://example.com/login`) |
+| `domain` | `string` | Yes | Full URL of the protected page (e.g. `https://example.com`) |
 
 #### Example
 
 ```bash
 curl -X POST http://localhost:8191/cloudflare \
   -H "Content-Type: application/json" \
-  -d '{"mode":"iuam","domain":"https://market-qx.trade/en/sign-in"}'
+  -d '{"mode":"iuam","domain":"https://example.com"}'
 ```
 
 #### Success Response (200)
