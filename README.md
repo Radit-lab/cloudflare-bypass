@@ -1,4 +1,6 @@
-# Cloudflare Bypass
+<p align="center">
+  <img src="assets/logo.svg" width="400" alt="Cloudflare Bypass">
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/version-1.0.0-blue" alt="Version">
