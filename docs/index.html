@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloudflare Bypass - Self-Hosted Turnstile Bypass API</title>
+  <meta name="description" content="A lightweight, self-hosted API server that bypasses Cloudflare Turnstile protection using Playwright. No third-party dependencies.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.6; }
+    .hero { text-align: center; padding: 100px 20px 60px; background: linear-gradient(135deg, #0d1117 0%, #161b22 100%); }
+    .hero img { width: 100px; height: 100px; border-radius: 50%; margin-bottom: 20px; }
+    .hero h1 { font-size: 2.5rem; color: #fff; margin-bottom: 10px; }
+    .hero p { font-size: 1.1rem; color: #8b949e; max-width: 600px; margin: 0 auto 30px; }
+    .btn { display: inline-block; padding: 12px 28px; background: #238636; color: #fff; text-decoration: none; border-radius: 6px; font-weight: 600; margin: 0 8px; transition: background .2s; }
+    .btn:hover { background: #2ea043; }
+    .btn-outline { background: transparent; border: 1px solid #30363d; color: #c9d1d9; }
+    .btn-outline:hover { background: #161b22; }
+    .features { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+    .features h2 { text-align: center; margin-bottom: 40px; font-size: 1.8rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 24px; }
+    .card h3 { color: #58a6ff; margin-bottom: 8px; }
+    .card p { color: #8b949e; font-size: 0.9rem; }
+    .code-block { background: #0d1117; border: 1px solid #30363d; border-radius: 6px; padding: 16px; margin: 10px 0; font-family: 'SF Mono', monospace; font-size: 0.85rem; overflow-x: auto; }
+    .footer { text-align: center; padding: 40px; color: #484f58; }
+    .badges { text-align: center; margin-bottom: 20px; }
+    .badges img { margin: 0 4px; }
+    @media (max-width: 600px) { .hero h1 { font-size: 1.8rem; } .hero { padding: 60px 16px 40px; } }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <img src="https://raw.githubusercontent.com/Radit-lab/cloudflare-bypass/main/assets/cloudflare-logo.jpg" alt="Cloudflare Logo">
+    <h1>Cloudflare Bypass</h1>
+    <p>A lightweight, self-hosted API server that bypasses Cloudflare Turnstile protection. No third-party dependencies. Built entirely with Playwright.</p>
+    <div class="badges">
+      <img src="https://img.shields.io/badge/version-1.0.0-blue" alt="Version">
+      <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
+      <img src="https://img.shields.io/badge/Node.js-18%2B-339933" alt="Node.js">
+      <img src="https://img.shields.io/badge/Playwright-1.52%2B-45ba4b" alt="Playwright">
+    </div>
+    <a href="https://github.com/Radit-lab/cloudflare-bypass" class="btn">View on GitHub</a>
+    <a href="https://github.com/Radit-lab/cloudflare-bypass#quick-start" class="btn btn-outline">Quick Start</a>
+  </div>
+
+  <div class="features">
+    <h2>Why Cloudflare Bypass?</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Zero Third-Party Dependencies</h3>
+        <p>No FlareSolverr, no puppeteer-extra, no cloudscraper. 100% own code with Playwright.</p>
+      </div>
+      <div class="card">
+        <h3>Anti-Detection Built In</h3>
+        <p>Removes navigator.webdriver, spoofs plugins, matches locale/timezone. Your requests look human.</p>
+      </div>
+      <div class="card">
+        <h3>Cookie Reuse</h3>
+        <p>Get cf_clearance once, reuse it across curl, Python, JS, or Playwright. Fast and efficient.</p>
+      </div>
+      <div class="card">
+        <h3>Simple API</h3>
+        <p>Single POST endpoint. JSON in, JSON out. Integrates in minutes with any language.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="features">
+    <h2>Quick Start</h2>
+    <div class="code-block">
+# Install & run<br>
+git clone https://github.com/Radit-lab/cloudflare-bypass.git<br>
+cd cloudflare-bypass<br>
+npm install<br>
+npm start
+    </div>
+    <div class="code-block">
+# Bypass any Cloudflare-protected URL<br>
+curl -X POST http://localhost:8191/cloudflare \<br>
+&nbsp;&nbsp;-H "Content-Type: application/json" \<br>
+&nbsp;&nbsp;-d '{"mode":"iuam","domain":"https://example.com"}'
+    </div>
+  </div>
+
+  <div class="footer">
+    Built with ❤️ by <a href="https://github.com/Radit-lab" style="color: #58a6ff;">Radit-lab</a>
+  </div>
+</body>
+</html>
