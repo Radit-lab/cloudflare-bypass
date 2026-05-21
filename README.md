@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.svg" width="400" alt="Cloudflare Bypass">
+  <img src="assets/cloudflare-logo.jpg" width="120" height="120" alt="Cloudflare Logo">
 </p>
 
 <p align="center">
